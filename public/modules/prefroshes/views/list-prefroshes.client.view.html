@@ -1,0 +1,20 @@
+<section data-ng-controller="PrefroshesController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Prefrosh</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="prefrosh in prefroshes" data-ng-href="#!/prefroshes/{{prefrosh._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="prefrosh.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="prefrosh.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="prefrosh.name"></h4>
+      <img data-ng-bind="prefrosh.picture"> <!-- PREFROSH IMAGE -->
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!prefroshes.$resolved || prefroshes.length">
+    	No Prefrosh yet, why don't you <a href="/#!/prefroshes/create">create one</a>?
+    </div>
+</section>

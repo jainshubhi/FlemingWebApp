@@ -1,0 +1,63 @@
+<section data-ng-controller="PrefroshesController">
+    <div class="page-header">
+        <h1>New Prefrosh</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="name">Name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
+                    </div>
+                    <label class="control-label" for="name">Picture</label>
+                    <div class="controls">
+                        <input type="url" data-ng-model="picture" id="picture" class="form-control" placeholder="Picture">
+                    </div>
+                    <label class="control-label" for="name">Interest Sheet</label>
+                    <div class="controls">
+                        <input type="url" data-ng-model="pdfInfo" id="pdfInfo" class="form-control" placeholder="Interest Sheet">
+                    </div>
+                    <label class="control-label" for="lunchDate">Lunch Date</label>
+                    <div class="controls">
+                        <input type="date" data-ng-model="lunchDate" id="lunchDate" class="form-control" placeholder="Lunch Date">
+                    </div>
+                    <label class="control-label" for="name">Dinner Date</label>
+                    <div class="controls">
+                        <input type="date" data-ng-model="dinnerDate" id="dinnerDate" class="form-control" placeholder="Dinner Date">
+                    </div>
+                    <label class="control-label" for="name">Dessert Date</label>
+                    <div class="controls">
+                        <input type="date" data-ng-model="dessertDate" id="dessertDate" class="form-control" placeholder="Dessert Date">
+                    </div>
+                    <label class="control-label" for="name">Comments</label>
+                    <div class="controls">
+                        <textarea name="Comments" data-ng-model="comments" id="comments" class="form-control" placeholder="Comments"></textarea>
+                    </div>
+                    <label class="control-label" for="name">How well do you know this person? (On a scale from 1 to 10 where 1 is "Haven't even met this person before" and 10 is "We are siblings")</label>
+                    <div class="controls">
+                        <input name="Q1" type="number" min="1" max="10" value="5" data-ng-model="q1" id="q1" class="form-control" placeholder="5">
+                    </div>
+                    <label class="control-label" for="name">How much do you want them in the House? (On a scale from 1 to 10 where 1 is "This person is my archnemesis – I hate them" and 10 is "I adore him/her")</label>
+                    <div class="controls">
+                        <input name="Q2" type="number" min="1" max="10" value="5" data-ng-model="q2" id="q2" class="form-control" placeholder="5">
+                    </div>
+                    <label class="control-label" for="name">How much would you like to live next to them? (On a scale from 1 to 10 where 1 is "This person is my archnemesis – I hate them" and 10 is "I adore him/her")</label>
+                    <div class="controls">
+                        <input name="Q3" type="number" min="1" max="10" value="5" data-ng-model="q3" id="q3" class="form-control" placeholder="5">
+                    </div>
+                    <label class="control-label" for="name">How much would they participate in house activities? (On a scale from 1 to 10 where 1 is "Not at all" and 10 is "They'd be at every house activity")</label>
+                    <div class="controls">
+                        <input name="Q4" type="number" min="1" max="10" value="5" data-ng-model="q4" id="q4" class="form-control" placeholder="5">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

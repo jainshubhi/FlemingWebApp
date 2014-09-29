@@ -1,0 +1,58 @@
+<section data-ng-controller="PrefroshesController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1 data-ng-bind="prefrosh.name"></h1>
+		<img ng-src="{{prefrosh.picture}}"/>
+	</div>
+	<div class="page-content">
+		<h3> Interest Sheet </h3>
+		<h4 data-ng-bind="prefrosh.pdfInfo"></h4>
+	</div>
+	<div class="page-content">
+		<h3> Lunch Date </h3>
+		<h4 data-ng-bind="prefrosh.lunchDate"></h4>
+	</div>
+	<div class="page-content">
+		<h3> Dinner Date </h3>
+		<h4 data-ng-bind="prefrosh.dinnerDate"></h4>
+	</div>
+	<div class="page-content">
+		<h3> Dessert Date </h3>
+		<h4 data-ng-bind="prefrosh.dessertDate"></h4>
+	</div>
+	<div class="page-content">
+		<h3> Comments </h3>
+		<h4 data-ng-bind="prefrosh.comments"></h4>
+	</div>
+	<div class="page-content">
+		<h3> How well do you know this person? (On a scale from 1 to 10 where 1 is "Haven't even met this person before" and 10 is "We are siblings") </h3>
+		<h4 data-ng-bind="prefrosh.q1"></h4>
+	</div>
+	<div class="page-content">
+		<h3> How much do you want them in the House?  (On a scale from 1 to 10 where 1 is "This person is my archnemesis – I hate them" and 10 is "I adore him/her") </h3>
+		<h4 data-ng-bind="prefrosh.q2"></h4>
+	</div>
+	<div class="page-content">
+		<h3> How much would you like to live next to them?  (On a scale from 1 to 10 where 1 is "This person is my archnemesis – I hate them" and 10 is "I adore him/her") </h3>
+		<h4 data-ng-bind="prefrosh.q3"></h4>
+	</div>
+	<div class="page-content">
+		<h3> How much would they participate in house activities?  (On a scale from 1 to 10 where 1 is "Not at all" and 10 is "They'd be at every house activity") </h3>
+		<h4 data-ng-bind="prefrosh.q4"></h4>
+	</div>
+	<div class="pull-right" data-ng-show="authentication.user._id == prefrosh.user._id || authentication.user.roles.indexOf('admin') > -1">
+		<a class="btn btn-primary" href="/#!/prefroshes/{{prefrosh._id}}/edit">
+			<i class="glyphicon glyphicon-edit"></i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			<i class="glyphicon glyphicon-trash"></i>
+		</a>
+	</div>
+	<small>
+		<em class="text-muted">
+			Posted on
+			<span data-ng-bind="prefrosh.created | date:'mediumDate'"></span>
+			by
+			<span data-ng-bind="prefrosh.user.displayName"></span>
+		</em>
+	</small>
+</section>
