@@ -11,7 +11,7 @@
 				<span data-ng-bind="prefrosh.user.displayName"></span>
 			</small>
 			<h4 class="list-group-item-heading" data-ng-bind="prefrosh.name"></h4>
-      <img data-ng-bind="prefrosh.picture"> <!-- PREFROSH IMAGE -->
+      <img ng-src="{{prefrosh.picture}}"> <!-- PREFROSH IMAGE -->
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!prefroshes.$resolved || prefroshes.length">
