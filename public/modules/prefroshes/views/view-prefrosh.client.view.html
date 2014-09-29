@@ -39,7 +39,7 @@
 		<h3> How much would they participate in house activities?  (On a scale from 1 to 10 where 1 is "Not at all" and 10 is "They'd be at every house activity") </h3>
 		<h4 data-ng-bind="prefrosh.q4"></h4>
 	</div>
-	<div class="pull-right" data-ng-show="authentication.user._id == prefrosh.user._id || authentication.user.roles.indexOf('admin') > -1">
+	<div class="pull-right">
 		<a class="btn btn-primary" href="/#!/prefroshes/{{prefrosh._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>
 		</a>
