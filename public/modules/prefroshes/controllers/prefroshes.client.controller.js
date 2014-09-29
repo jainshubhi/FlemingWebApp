@@ -9,7 +9,7 @@ angular.module('prefroshes').controller('PrefroshesController', ['$scope', '$sta
 		$scope.create = function() {
 			// Create new Prefrosh object
 			var prefrosh = new Prefroshes ({
-				name: this.name,
+				names: this.names,
 				lunchDate: this.lunchDate,
 				dinnerDate: this.dinnerDate,
 				dessertDate: this.dessertDate,
