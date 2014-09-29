@@ -46,7 +46,7 @@ var UserSchema = new Schema({
 		trim: true,
 		default: '',
 		validate: [validateLocalStrategyProperty, 'Please fill in your email'],
-		match: [/.+\@caltech.edu/, 'Please fill a valid Caltech email address'],
+		match: [/.+\@caltech.edu/, 'Please fill a valid Fleming Caltech email address'],
 		unique: 'testing error message'
 	},
 	year: {
