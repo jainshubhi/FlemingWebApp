@@ -5,15 +5,15 @@
 	</div>
 	<div class="page-content">
 		<h3> Lunch Date </h3>
-		<h4 data-ng-bind="prefrosh.lunchDate | date:'short'"></h4>
+		<h4 data-ng-bind="prefrosh.lunchDate.toUTCString() | date:'short'"></h4>
 	</div>
 	<div class="page-content">
 		<h3> Dinner Date </h3>
-		<h4 data-ng-bind="prefrosh.dinnerDate | date:'short'"></h4>
+		<h4 data-ng-bind="prefrosh.dinnerDate.toUTCString() | date:'short'"></h4>
 	</div>
 	<div class="page-content">
 		<h3> Dessert Date </h3>
-		<h4 data-ng-bind="prefrosh.dessertDate | date:'short'"></h4>
+		<h4 data-ng-bind="prefrosh.dessertDate.toUTCString() | date:'short'"></h4>
 	</div>
 	<div class="page-content">
 		<h3> Comments </h3>
